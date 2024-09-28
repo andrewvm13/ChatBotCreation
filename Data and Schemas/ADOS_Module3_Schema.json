@@ -1,0 +1,391 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "ADOS_Module3",
+	"id": "resource:/schemas/ADOS_Module3#",
+	"type": "object",
+	"additionalProperties": false,
+    "properties": {
+        "diagnosis": {
+            "description": "Diagnosis calculated from instrument.",
+            "enum": ["Autism", "Autism Spectrum", "Control", null]
+        },
+        "diagnosis_num_nulls": {
+            "description": "Number of null entries encountered when calculating diagnosis.",
+            "type": ["integer", "null"],
+            "minimum": 0
+        },
+        "communication": {
+            "description": "Communication. Subscore used in assigning diagnosis.",
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "data-type": "score"
+        },
+        "social_interaction": {
+            "description": "Social interaction. Subscore used in assigning diagnosis.",
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "data-type": "score"
+        },
+        "restricted_repetitive_behavior": {
+            "description": "Restricted repetitive behavior. Subscore used in assigning diagnosis.",
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "data-type": "score"
+        },
+        "creativity": {
+            "description": "Creativity. Subscore used in assigning diagnosis.",
+            "type": ["integer", "null"],
+            "minimum": 0,
+            "data-type": "score"
+        },
+        "QA01": {
+            "data-type": "ordinal",
+            "description": " Does your child display non-echoed language.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QA02": {
+            "data-type": "ordinal",
+            "description": "Does your child display Speech abnormalities associated with autism (intonation/volume/rhythm/rate).",
+            "enum": [
+                null,
+                0,
+                1,
+                2, 7
+            ]
+        },
+
+        "QA03": {
+            "data-type": "ordinal",
+            "description": "Does your child display Immediate echolalia.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QA04": {
+            "data-type": "ordinal",
+            "description": "Does your child display Stereotyped/idiosyncratic use of words or phases.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QA05": {
+            "data-type": "ordinal",
+            "description": "Does your child offer information.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+        "QA06": {
+            "data-type": "ordinal",
+            "description": "Does your child Ask for information.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QA07": {
+            "data-type": "ordinal",
+            "description": "Does your child Report of events.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QA08": {
+            "data-type": "ordinal",
+            "description": "Does your child display Conversation.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QA09": {
+            "data-type": "ordinal",
+            "description": "Does your child display Descriptive conventional instrumental or informative gestures.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+
+        "QB01": {
+            "data-type": "ordinal",
+            "description": "Does your child display Unusual eye contact.",
+            "enum": [
+                null,
+                0,
+                2
+            ]
+        },
+        "QB02": {
+            "data-type": "ordinal",
+            "description": "Does your child display Facial expressions directed to others.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+        "QB03": {
+            "data-type": "ordinal",
+            "description": "Does your child display Language production and linked nonverbal communication.",
+            "enum": [
+                null,
+                0,
+                1,
+                2, 7
+            ]
+        },
+
+        "QB04": {
+            "data-type": "ordinal",
+            "description": "Does your child display Shared enjoyment in interaction.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+
+        "QB05": {
+            "data-type": "ordinal",
+            "description": "Does your child display Empathy/comments on others' emotions.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QB06": {
+            "data-type": "ordinal",
+            "description": "Does your child display Insight.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QB07": {
+            "data-type": "ordinal",
+            "description": "Does your child display  social overtures.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QB08": {
+            "data-type": "ordinal",
+            "description": "Does your child display social response.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QB09": {
+            "data-type": "ordinal",
+            "description": " Does your child display reciprocal social communication.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QB10": {
+            "data-type": "ordinal",
+            "description": "Overall quality of rapport.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QC01": {
+            "data-type": "ordinal",
+            "description": "Does your child display Imagination/creativity.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QD01": {
+            "data-type": "ordinal",
+            "description": "Does your child display Unusual sensory interest in play material/person.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+        "QD02": {
+            "data-type": "ordinal",
+            "description": "Does your child display Hand and finger and other complex mannerisms.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+        "QD03": {
+            "data-type": "ordinal",
+            "description": "Does your child display Self-injurious behaviour.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+        "QD04": {
+            "data-type": "ordinal",
+            "description": "Does your child display Excessive interest in or references to unusual or highly specific topics or objects or repetitive behaviors.",
+            "enum": [
+                null,
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        "QD05": {
+            "data-type": "ordinal",
+            "description": "Does your child display Compulsions or rituals.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+        "QE01": {
+            "data-type": "ordinal",
+            "description": "Does your child display Overactivity/agitation.",
+            "enum": [
+                null,
+                0,
+                1,
+                2, 7
+            ]
+        },
+        "QE02": {
+            "data-type": "ordinal",
+            "description": "Does your child display Tantrums aggression negative or disruptive behavior.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+        "QE03": {
+            "data-type": "ordinal",
+            "description": "Does your child display Anxiety.",
+            "enum": [
+                null,
+                0,
+                1,
+                2
+            ]
+        },
+        "age": {
+            "description": "Age in months at interview",
+            "minimum": 0,
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "interview_date": {
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    },
+    "required": [
+        "age",
+        "interview_date",
+        "diagnosis", "diagnosis_num_nulls", "communication", "social_interaction", "creativity", "restricted_repetitive_behavior",
+        "QA01",
+        "QA02",
+        "QA02a",
+        "QA03",
+        "QA04",
+        "QA05",
+        "QA06",
+        "QA07",
+        "QA08",
+        "QA09",
+        "QA09a",
+        "QB01",
+        "QB10",
+        "QB02",
+        "QB03",
+        "QB03a",
+        "QB04",
+        "QB04a",
+        "QB05",
+        "QB06",
+        "QB07",
+        "QB08",
+        "QB09",
+        "QC01",
+        "QD01",
+        "QD02",
+        "QD03",
+        "QD04",
+        "QD05",
+        "QE01",
+        "QE02",
+        "QE03"
+    ]
+}

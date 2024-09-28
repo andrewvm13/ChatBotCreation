@@ -1,0 +1,394 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "ADOS_Module1",
+	"id": "resource:/schemas/ADOS_Module1#",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"diagnosis": {
+			"description": "What is the diagnosis calculated from the instrument?",
+			"enum": ["Autism", "Autism Spectrum", "Control"]
+		},
+		"diagnosis_num_nulls": {
+			"description": "How many null entries were encountered when calculating the diagnosis?",
+			"type": ["integer", "null"],
+			"minimum": 0
+		},
+		"communication": {
+			"description": "What is the communication subscore used in assigning the diagnosis?",
+			"type": ["integer", "null"],
+			"minimum": 0,
+			"data-type": "score"
+		},
+		"social_interaction": {
+			"description": "What is the social interaction subscore used in assigning the diagnosis?",
+			"type": ["integer", "null"],
+			"minimum": 0,
+			"data-type": "score"
+		},
+		"restricted_repetitive_behavior": {
+			"description": "What is the restricted repetitive behavior subscore used in assigning the diagnosis?",
+			"type": ["integer", "null"],
+			"minimum": 0,
+			"data-type": "score"
+		},
+		"creativity": {
+			"description": "What is the creativity subscore used in assigning the diagnosis?",
+			"type": ["integer", "null"],
+			"minimum": 0,
+			"data-type": "score"
+		},
+		"QA01": {
+			"data-type": "ordinal",
+			"description": "What is the overall level of non-echoed language?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Regular use of utterances with two or more words.",
+				"1": "Occasional phrases only; mostly single words.",
+				"2": "Recognizable single words only; must use at least five different words during session.",
+				"3": "At least one word or word approximation but fewer than five words used during session."
+			}
+		},
+		"QA02": {
+			"data-type": "ordinal",
+			"description": "How often does your child vocalize directed to others?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Directs vocalizations to parent/caregiver or examiner in a variety of contexts.",
+				"1": "Directs vocalizations to parent/caregiver or examiner consistently in one context.",
+				"2": "Directs an occasional vocalization to parent/caregiver or examiner inconsistently.",
+				"3": "Vocalizations almost never appear to be directed to parent/caregiver or examiner."
+			}
+		},
+		"QA03": {
+			"data-type": "ordinal",
+			"description": "How would you describe the intonation of your child's vocalizations or verbalizations?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "Normal appropriately varying intonation with no peculiar or odd intonation.",
+				"1": "Little variation in pitch and tone; rather flat or exaggerated or occasional peculiar intonation.",
+				"2": "Odd intonation or inappropriate pitch and stress AND/OR markedly flat and toneless mechanical vocalizations."
+			}
+		},
+		"QA04": {
+			"data-type": "ordinal",
+			"description": "Does your child exhibit immediate echolalia?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Rarely or never repeats others' speech.",
+				"1": "Occasional echoing.",
+				"2": "Echoing words and phrases regularly but some spontaneous language.",
+				"3": "Speech largely consists of immediate echolalia."
+			}
+		},
+		"QA05": {
+			"data-type": "ordinal",
+			"description": "Does your child use stereotyped or idiosyncratic words or phrases?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Rarely or never uses stereotyped or idiosyncratic words or phrases.",
+				"1": "Use of words or phrases tends to be more repetitive than that of most individuals at the same level of complexity but not obviously odd.",
+				"2": "Often uses stereotyped utterances or odd words or phrases with some other language.",
+				"3": "Phrases almost exclusively odd or stereotyped utterances."
+			}
+		},
+		"QA06": {
+			"data-type": "ordinal",
+			"description": "Does your child use others' bodies to communicate?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "No use of another person's body to communicate except in situations where other strategies have not worked.",
+				"1": "Takes another person's hand and leads him/her places without coordinated gaze but no placement of hand on objects and no use of it as a tool or to point.",
+				"2": "Placement of another person's hand or other body part on object OR movement of that person's hand when it is holding an object OR use of his/her hand or other body part as a tool or to gesture 'for' the child."
+			}
+		},
+		"QA07": {
+			"data-type": "ordinal",
+			"description": "How often does your child point to indicate interest or needs?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Points with index finger to show visually-directed referencing (coordinated gaze to object and person) of distal objects in at least two contexts.",
+				"1": "Uses pointing to reference objects but without sufficient flexibility or frequency to meet criteria for a rating of 0.",
+				"2": "Points only when close to or actually touching an object without coordinated gaze or vocalization.",
+				"3": "Does not point to objects in any way."
+			}
+		},
+		"QA08": {
+			"data-type": "ordinal",
+			"description": "How often does your child use gestures to communicate?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "Spontaneous use of at least two different gestures of any type (descriptive, conventional, emotional, or instrumental excluding pointing); at least one used more than once.",
+				"1": "Spontaneous use of descriptive, conventional, instrumental, or emotional gestures but exaggerated or limited in range and/or contexts.",
+				"2": "No spontaneous use of descriptive, conventional, instrumental, or emotional gestures OR inappropriate use only."
+			}
+		},
+		"QB01": {
+			"data-type": "ordinal",
+			"description": "Does your child make unusual eye contact?",
+			"enum": [0, 2],
+			"modifiers": {
+				"0": "Appropriate gaze with subtle changes meshed with other communication.",
+				"2": "Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction."
+			}
+		},
+		"QB02": {
+			"data-type": "ordinal",
+			"description": "Does your child give a responsive social smile?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Smiles immediately in response to one of the first two smiles of the examiner and/or parent/caregiver.",
+				"1": "Delayed or partial smile OR smiles fully or partially only after more than two smiles by the parent/caregiver or the examiner OR smiles only in response to a specific request.",
+				"2": "Smiles fully or partially at the parent/caregiver or the examiner only after being tickled or touched in some way OR in response to a repeated action with a physical component.",
+				"3": "Does not smile in response to another person."
+			}
+		},
+		"QB03": {
+			"data-type": "ordinal",
+			"description": "Does your child direct facial expressions to others?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "Directs a range of appropriate facial expressions toward parent/caregiver or examiner in order to communicate affect.",
+				"1": "Some direction of facial expressions to examiner and/or parent/caregiver.",
+				"2": "Rarely or never directs appropriate facial expressions to others."
+			}
+		},
+		"QB04": {
+			"data-type": "ordinal",
+			"description": "How does your child integrate gaze and other behaviors during social overtures?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Uses eye contact effectively with words or vocalizations or gestures to communicate social intention.",
+				"1": "Uses eye contact and vocalization independently of each other to communicate social intention.",
+				"2": "Uses either eye contact or vocalization to communicate social intention.",
+				"3": "Uses neither eye contact nor vocalization to communicate social intention OR no social overtures."
+			}
+		},
+		"QB05": {
+			"data-type": "ordinal",
+			"description": "Does your child show shared enjoyment in interaction?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "Shows definite and appropriate pleasure with the examiner during more than one activity.",
+				"1": "Shows some appropriate pleasure in the examiner's actions during more than one activity OR shows definite pleasure directed to the examiner during one interaction.",
+				"2": "Shows little or no expressed pleasure in interaction with the examiner."
+			}
+		},
+		"QB06": {
+			"data-type": "ordinal",
+			"description": "How does your child respond to their name?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Looks toward the examiner and makes eye contact immediately on at least one of the first two clear presses made by the examiner.",
+				"1": "Looks toward the parent/caregiver and makes eye contact immediately for first or second press of name only OR makes eye contact with the examiner immediately for the examiner's third or fourth press of name only.",
+				"2": "Does not make eye contact with either the examiner or the parent/caregiver after his/her name is called in six attempts but shifts gaze briefly OR looks at least once when an interesting or familiar vocalization or verbalization is made.",
+				"3": "Does not look toward either the examiner or the parent/caregiver after any purely verbal or vocal attempt to get attention."
+			}
+		},
+		"QB07": {
+			"data-type": "ordinal",
+			"description": "How does your child request things from others?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Exhibits appropriate integration of eye contact and at least one behavior to request bubbles, the switch-operated animal, object, routine, or social routine.",
+				"1": "Uses one or more behavior(s) listed above to request the animal, bubbles, and/or a routine without integrating eye contact and other behavior(s) such as vocalization or gesture.",
+				"2": "Does not directly request as specified above for ratings of 0 or 1 but uses some physical means to request at least one action as part of a routine.",
+				"3": "May participate in routine(s) or try to activate an object by vocalizing, banging, or other actions without looking at another person or vocalizing for help but does not request as specified above."
+			}
+		},
+		"QB08": {
+			"data-type": "ordinal",
+			"description": "How often does your child give objects to others?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "Spontaneously gives toys or objects to other people in a variety of contexts throughout the ADOS evaluation, including giving toys, food, or pretend food for the purpose of sharing.",
+				"1": "Gives objects to other people for the purpose of getting help or as part of a routine.",
+				"2": "Rarely or never gives anything to another person."
+			}
+		},
+		"QB09": {
+			"data-type": "ordinal",
+			"description": "How often does your child show objects to others?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "Spontaneously shows toys or objects throughout the ADOS evaluation by holding them up or placing them in front of others and using eye contact with or without vocalization.",
+				"1": "Shows toys or objects in a partial or inconsistent manner.",
+				"2": "Does not show objects to another person."
+			}
+		},
+		"QB10": {
+			"data-type": "ordinal",
+			"description": "How often does your child initiate joint attention spontaneously?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "Uses clearly integrated eye contact to reference an object that is out of reach by looking at the object, then at the examiner or the parent/caregiver, and then back to the object.",
+				"1": "Partially references an object that is clearly out of reach but does not coordinate either of these with looking at another person.",
+				"2": "No approximation of spontaneous initiation of joint attention in order to reference an object that is out of reach."
+			}
+		},
+		"QB11": {
+			"data-type": "ordinal",
+			"description": "How does your child respond to joint attention?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target.",
+				"1": "Responds to the examiner's pointing by looking at or toward the target.",
+				"2": "Looks at the target when it is activated or placed directly in front of him/her but does not make use of the examiner's gaze or pointing in order to locate the target from a distance.",
+				"3": "No interest or awareness of the target."
+			}
+		},
+		"QB12": {
+			"data-type": "ordinal",
+			"description": "How would you rate the quality of your child's social overtures?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Effectively uses nonverbal and verbal means to make clear social overtures to the examiner or the parent/caregiver. The overtures must be appropriate to immediate contexts.",
+				"1": "Slightly unusual quality of social overtures. Overtures are restricted to personal demands or related to strong interests but with some attempt to involve the examiner or the parent/caregiver.",
+				"2": "Overtures often lack integration into context AND/OR social quality.",
+				"3": "Negligible social overtures of any kind."
+			}
+		},
+		"QC01": {
+			"data-type": "ordinal",
+			"description": "Does your child engage in functional play with objects?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Spontaneously plays with a variety of toys in a conventional manner, including appropriate play with several different miniatures.",
+				"1": "Some spontaneous functional play with cause-and-effect toys with at least one miniature.",
+				"2": "Plays appropriately with cause-and-effect toys and/or construction toys only AND/OR pushing the car.",
+				"3": "No play with toys or only stereotyped play."
+			}
+		},
+		"QC02": {
+			"data-type": "ordinal",
+			"description": "How would you rate your child's imagination and creativity?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "Spontaneous use of a doll or other object as an independent agent OR uses objects to represent other objects.",
+				"1": "Spontaneous pretend play with a doll or other objects but no use of a doll or other toy as an independent agent or placeholder.",
+				"2": "Imitates pretend play OR imitation with a placeholder; no spontaneous pretend play.",
+				"3": "No pretend play."
+			}
+		},
+		"QD01": {
+			"data-type": "ordinal",
+			"description": "Does your child show unusual sensory interest in play material or people?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "No sniffing, repetitive touching, feeling of texture, licking or biting, interest in the repetition of or unusually strong reactions to certain sounds, or unusual or prolonged visual examination.",
+				"1": "Occasional unusual sensory interests or responses.",
+				"2": "Definite interest in nonfunctional elements of play materials OR sensory examination of himself/herself or others on more than one occasion OR persistent unusual sensory response to several materials or events."
+			}
+		},
+		"QD02": {
+			"data-type": "ordinal",
+			"description": "Does your child exhibit hand and finger or other complex mannerisms?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "None.",
+				"1": "Very brief or rare hand and finger mannerisms or complex mannerisms.",
+				"2": "Definite finger flicking or twisting AND/OR hand or other mannerisms or stereotypes."
+			}
+		},
+		"QD03": {
+			"data-type": "ordinal",
+			"description": "Does your child engage in self-injurious behavior?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "No attempts to harm self.",
+				"1": "Rare and/or dubious self-injury.",
+				"2": "Self-injury definitely present."
+			}
+		},
+		"QD04": {
+			"data-type": "ordinal",
+			"description": "Does your child have unusually repetitive interests or stereotyped behaviors?",
+			"enum": [0, 1, 2, 3],
+			"modifiers": {
+				"0": "No repetitive or stereotyped behaviors during the ADOS evaluation.",
+				"1": "An interest or behavior that is repetitive or stereotyped to an unusual degree.",
+				"2": "Repetitive or stereotyped interests and/or behaviors form a substantial minority of the child's interests and spontaneous behaviors.",
+				"3": "Repetitive or stereotyped interests and/or behaviors form the majority of the child's interests."
+			}
+		},
+		"QE01": {
+			"data-type": "ordinal",
+			"description": "Is your child overactive?",
+			"enum": [0, 1, 2, 7],
+			"modifiers": {
+				"0": "Sits or stands still appropriately when expected to do so during the assessment.",
+				"1": "Sits briefly or stands still when expected to do so but often fidgets, moves about, or gets up out of his/her seat.",
+				"2": "Hardly remains still at all. The level of activity disrupts the assessment.",
+				"7": "Underactive."
+			}
+		},
+		"QE02": {
+			"data-type": "ordinal",
+			"description": "Does your child exhibit tantrums, aggression, or negative/disruptive behavior?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "Not upset, disruptive, negative, destructive, or aggressive during ADOS.",
+				"1": "Occasional display of mild upset, anger, aggression, negativism, or disruptive behavior to the parent/caregiver or the examiner.",
+				"2": "Shows marked or repeated negativism, temper tantrums, or more significant aggression."
+			}
+		},
+		"QE03": {
+			"data-type": "ordinal",
+			"description": "Does your child show signs of anxiety?",
+			"enum": [0, 1, 2],
+			"modifiers": {
+				"0": "No obvious anxiety.",
+				"1": "Mild signs of anxiety, especially at the beginning of the interview OR marked anxiety only in response to a specific request or to one particular toy or task.",
+				"2": "Marked anxiety in response to more than one toy or task or several times during the evaluation."
+			}
+		},
+		"age": {
+			"description": "What is your child's age in months at the time of the interview?",
+			"minimum": 0,
+			"type": ["integer", "null"]
+		},
+		"interview_date": {
+			"type": ["string", "null"],
+			"description": "What is the date of the interview?"
+		}
+	},
+	"required": [
+		"age",
+		"interview_date",
+		"diagnosis",
+		"diagnosis_num_nulls",
+		"communication",
+		"social_interaction",
+		"restricted_repetitive_behavior",
+		"creativity",
+		"QA01",
+		"QA02",
+		"QA03",
+		"QA04",
+		"QA05",
+		"QA06",
+		"QA07",
+		"QA08",
+		"QB01",
+		"QB02",
+		"QB03",
+		"QB04",
+		"QB05",
+		"QB06",
+		"QB07",
+		"QB08",
+		"QB09",
+		"QB10",
+		"QB11",
+		"QB12",
+		"QC01",
+		"QC02",
+		"QD01",
+		"QD02",
+		"QD03",
+		"QD04",
+		"QE01",
+		"QE02",
+		"QE03"
+	]
+}
